@@ -1,0 +1,139 @@
+.button{
+		background-color: #348577;
+		border: none;
+		color: white;
+		padding: 10px 25px;
+		text-align: centre;
+		font-size: 15px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+.button:hover {
+    background-color: #2F6D62;
+}
+
+.error{
+	font: 'Comic Sans MS';
+	text-align: center;
+	color: red;
+	padding: 25px;
+	width: 25%;
+	height: auto;
+	background: rgba(91, 171, 170, 0.5);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 75px;
+	align-content: center;
+}
+
+.success{
+	
+}
+
+input:invalid {
+  border:2px solid red;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=password]{
+	background-color: transparent;
+	width: 200px;
+	border: none;
+	outline: none;
+  	border-bottom: 3px solid #53B1AF;
+ 	-webkit-transition: width 0.5s;
+    transition: width 0.5s;
+ 	color: black;
+ 	text-align: center;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=password]:focus {
+    width: 250px;
+    border-bottom: 3px solid #458786;
+}
+body{
+	background-image: url(bg.jpg);
+}
+
+.container{
+	padding: 25px;
+	width: 25%;
+	height: auto;
+	background: rgba(91, 171, 170, 0.5);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 75px;
+	align-content: center;	
+}
+
+font{
+	color: white;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+a:active {
+    color: grey;
+    text-decoration: underline;
+}
+
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(91, 171, 170, 0.5);
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(91, 171, 170, 0.5);
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #32D5D3;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #509594;
+    text-decoration:none;
+}
+.maincontent{
+	padding: 25px;
+	background: rgba(91, 171, 170, 0.8);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	align-content: left;	
+}
+
+.footer{
+   align-content: center;
+   position: fixed;
+   bottom: 10px;
+   width: 95%;
+   background: rgba(91, 171, 170, 0.8);
+   color: white;
+   text-align: right;
+}

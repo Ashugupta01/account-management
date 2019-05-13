@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload Pic</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="topnav">
+	<ul>
+  		<li><a class="active" href="index.html">Home</a></li>
+ 		<li><a href="profile">Profile</a></li>
+ 		<li><a href="UploadPic.html">Upload Profile Pic</a></li>
+  		<li style="float:right"><a href="Error.html">Contact</a></li>
+  		<li style="float:right"><a href="Error.html">About</a></li>
+	</ul>
+	</div>  
+	
+	<font face="Comic Sans Ms">
+	<h1>Please upload your Profile picture here!</h1>
+	
+		<form action="UploadServlet" method="get" enctype="multipart/form-data">  
+		Select File:<input type="file" name="fname"><br>  
+		<input type="submit" value="upload">  
+		</form> 
+	
+	</font>
+</body>
+</html>

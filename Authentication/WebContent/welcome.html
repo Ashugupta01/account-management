@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome!</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<font face="Comic Sans MS">
+	<div class="topnav">
+	<ul>
+  		<li><a class="active" href="index.html">Home</a></li>
+ 		<li><a href="profile">Profile</a></li>
+ 		<li><a href="UploadPic.html">Upload Profile Pic</a></li>
+  		<li style="float:right"><a href="Error.html">Contact</a></li>
+  		<li style="float:right"><a href="Error.html">About</a></li>
+	</ul>
+	</div>
+	<h1>Dashboard</h1>
+	<div class="maincontent">
+	
+		<img id="userpic" src="no-user.png" style="height:150px; width:150px;">
+		<img="D:/Login Project/Profile Pics/" alt="Your profile picture is not uploaded. Please upload one!">
+		
+		<h3>Upload your profile pic here!</h3><br>
+		<a class="button" href="UploadPic.html">Upload Picture</a>
+		<button class="button" onclick="fetchImage()">Update Pic</button>
+	</div>
+	<div class="footer">
+		<a href="logout">Logout</a>
+	</div>
+	</font>
+</body>
+<script>
+var xhttp = new XMLHttpRequest();
+	function fetchImage() {
+		 
+		    xhttp.open("POST", "http://localhost:8080/SignUp_and_LogIn_Project/fetchImage", true);
+		    //xhttp.setRequestHeader("Content-type", "application/json");
+		    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		    xhttp.send();
+		    xhttp.onreadystatechange=state_Change;
+		    console.log("xhttp.responseText - ", xhttp.response)
+		    var response = JSON.parse(xhttp.response);
+		    console.log("response == ", response);
+		    //var imgelement = document.getElementById("userpic")
+		    //imgelement.src = response.fname
+	}
+	
+	function state_Change()
+	{
+	        // if xmlhttp shows "complete"
+	        console.log("state_Change= ", xhttp.readyState)
+	        if (xhttp.readyState==4) {
+	                if (xhttp.status == 200) {
+	                	
+	                  contents = xhttp.responseText; // ALWAYS BLANK!!! ARG
+	                  var resp = JSON.parse(contents)
+	                  console.log("response data = ", contents.fname, resp, resp.fname)
+	                  //alert(contents);
+	                  var imgelement = document.getElementById("userpic")
+	      		    imgelement.src = resp.fname        
+	                }
+	        }
+	}
+</script>
+</html>
